@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Berapa Hari Lagi? - Countdown Timer</title>
+    <meta name="description" content="Hitung mundur ke event pentingmu seperti Wisuda, UAS, atau event lainnya.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="background-animation">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+    </div>
+
+    <div class="container glass-panel">
+        <header>
+            <h1>Berapa Hari Lagi?</h1>
+            <p>Hitung mundur momen pentingmu</p>
+        </header>
+
+        <main>
+            <div class="input-section">
+                <div class="input-group">
+                    <label for="eventName">Nama Event</label>
+                    <input type="text" id="eventName" placeholder="Contoh: Wisuda, UAS..." autocomplete="off">
+                </div>
+                <div class="input-group">
+                    <label for="eventDate">Tanggal Event</label>
+                    <input type="datetime-local" id="eventDate">
+                </div>
+                <button id="startBtn" class="btn-primary">Mulai Hitung Mundur</button>
+            </div>
+
+            <div class="countdown-section hidden" id="countdownDisplay">
+                <h2 id="displayEventName" class="gradient-text">Event</h2>
+
+                <div class="timer-grid">
+                    <div class="time-box">
+                        <span class="time-value" id="days">00</span>
+                        <span class="time-label">Hari</span>
+                    </div>
+                    <div class="time-box">
+                        <span class="time-value" id="hours">00</span>
+                        <span class="time-label">Jam</span>
+                    </div>
+                    <div class="time-box">
+                        <span class="time-value" id="minutes">00</span>
+                        <span class="time-label">Menit</span>
+                    </div>
+                    <div class="time-box">
+                        <span class="time-value" id="seconds">00</span>
+                        <span class="time-label">Detik</span>
+                    </div>
+                </div>
+
+                <div class="progress-container">
+                    <div class="progress-bar" id="progressBar"></div>
+                </div>
+
+                <p id="targetDateDisplay" class="target-date-info"></p>
+                <button id="resetBtn" class="btn-secondary">Reset</button>
+            </div>
+
+            <div class="celebration hidden" id="celebration">
+                <h2>🎉 Waktunya Tiba! 🎉</h2>
+                <p id="celebrationMessage">Event yang ditunggu-tunggu telah tiba!</p>
+                <button id="newTimerBtn" class="btn-primary">Buat Hitung Mundur Baru</button>
+            </div>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
